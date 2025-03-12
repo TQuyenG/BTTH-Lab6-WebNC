@@ -1,0 +1,163 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  background: #f4f4f4;
+}
+
+/* Layout */
+.main-content {
+  padding: 20px;
+  min-height: 80vh;
+  margin-top: 60px; 
+}
+
+/* ===== Header ===== */
+.header {
+  width: 100%;
+  background: #cf5f5f;
+  color: white;
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.header-left,
+.header-right {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+
+.header span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+/* ===== Navbar ===== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 40px; /* Để nằm dưới Header */
+  left: 0;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar.sticky {
+  top: 0;
+}
+
+.navbar .logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-decoration: none;
+}
+
+.navbar .menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.navbar .menu li {
+  margin: 0 15px;
+}
+
+.navbar .menu li a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  transition: color 0.3s, border-bottom 0.3s;
+}
+
+.navbar .menu li a:hover {
+  color: #4e4e4e;
+}
+
+.active {
+  color: #4e4e4e;
+  border-bottom: 2px solid #4e4e4e;
+}
+
+/* ===== Thanh tìm kiếm ===== */
+.search-box {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.search-box .search-icon {
+  font-size: 20px;
+  color: #6c757d;
+}
+
+.search-box input {
+  border: none;
+  padding: 8px;
+  font-size: 1rem;
+  outline: none;
+}
+
+.search-box button {
+  background: transparent;
+  border: none;
+  padding: 8px 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+
+/* ===== Footer ===== */
+.footer {
+  background: #222;
+  color: white;
+  text-align: center;
+  padding: 15px 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+/* ===== Swiper ===== */
+.swiper {
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.swiper-pagination {
+  bottom: 10px;
+}
+
+.swiper-button-next,
+.swiper-button-prev {
+  color: #333;
+}

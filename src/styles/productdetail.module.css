@@ -1,0 +1,269 @@
+.container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 20px;
+}
+
+.productWrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.imageWrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imageGallery {
+  width: 50%;
+}
+
+.mainSlider {
+  border-radius: 12px;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  padding: 5px;
+  background: #f9f9f9;
+}
+
+.mainImage {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.thumbnailSlider {
+  margin-top: 10px;
+}
+
+.thumbnailImage {
+  width: 100%;
+  height: 80px;
+  object-fit: cover;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border 0.3s, transform 0.2s;
+}
+
+.thumbnailImage:hover {
+  border: 2px solid #000;
+  transform: scale(1.05);
+}
+
+/*************************************** Thông tin ***********************************/
+
+.productInfo {
+  width: 50%;
+  padding: 10px;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.price {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #d32f2f;
+  margin-bottom: 20px;
+}
+
+
+/*************************************** Button ***********************************/
+
+.buttonContainer {
+  display: flex;
+  overflow: hidden;
+  margin-top: 70px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.addToCart,
+.buyNow {
+  padding: 12px 20px;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+
+}
+
+.addToCart {
+  background: #2ea35d;
+  color: #000;
+}
+
+.buyNow {
+  background: #d15050;
+  color: #000;
+}
+
+.addToCart:hover {
+  background: #2ea35d;
+  color: #fff;
+}
+
+.buyNow:hover {
+  background: #d15050;
+  color: #fff;
+}
+
+.icon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+}
+
+/*************************************** Kích thước ***********************************/
+.sizeOptions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+.colorOptions button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  transition: border 0.3s ease;
+}
+
+.colorOptions button:hover {
+  border: 2px solid #000;
+}
+
+.colorOptions .colorButtonActive {
+  border: 3px solid #000 !important;
+}
+
+
+.colorButton {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: border 0.3s;
+}
+
+.colorButtonActive {
+  border: 3px solid #000 !important;
+}
+
+/*************************************** Màu sắc ***********************************/
+.colorOptions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.sizeOptions button {
+  padding: 10px 15px;
+  border: 2px solid #ccc;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: border 0.3s ease;
+}
+
+.sizeOptions button:hover {
+  border: 2px solid #000;
+}
+
+.sizeOptions .sizeButtonActive {
+  border: 3px solid #000 !important;
+}
+
+/* CSS cập nhật cho phần số lượng */
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityButton {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background 0.3s, border 0.3s;
+}
+
+.quantityButton:hover {
+  background: #ddd;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+/* CSS cập nhật cho phần số lượng */
+.quantityContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.quantityButton {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #ccc;
+  background: #f9f9f9;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: background 0.3s, border 0.3s;
+}
+
+.quantityButton:hover {
+  background: #acacac;
+}
+
+.quantity {
+  font-size: 1.2rem;
+  width: 40px;
+  text-align: center;
+  font-weight: bold;
+}
+
+
+
+
+

@@ -1,0 +1,194 @@
+/* cart.module.css */
+
+/* Main container for the cart page */
+.cartContainer {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  display: flex; /* Use flexbox for layout */
+  flex-direction: column; /* Stack children vertically */
+}
+
+/* Title for the cart and summary */
+.cartTitle {
+  font-size: 24px;
+  font-weight: bold;
+  color: #333;
+  text-align: center; /* Center-align the title */
+  margin-bottom: 10px; /* Space below the title */
+}
+
+/* Summary of items in cart */
+.cartSummary {
+  font-size: 16px;
+  color: #666;
+  text-align: center; /* Center-align summary */
+  margin-bottom: 20px; /* Space below the summary */
+}
+
+/* Container for both cart and payment sections */
+.contentContainer {
+  display: flex; /* Use flexbox for horizontal layout */
+  justify-content: space-between; /* Space between the two sections */
+}
+
+/* Left section containing cart items */
+.cartLeft {
+  flex: 2; /* Make the cart section take more space */
+  margin-right: 20px; /* Add space between containers */
+}
+
+/* Right section for payment */
+.cartRight {
+  flex: 1; /* Make the checkout section take less space */
+  margin-left: 20px; /* Add space between containers */
+  border-left: 2px solid #cd7c7c; /* Add left border for separation */
+  padding-left: 20px; /* Add padding to the left of the checkout section */
+  margin-top: 20px; /* Add space on top of the payment section */
+  margin-bottom: 20px; /* Add space below the payment section */
+}
+
+/* Divider line */
+.divider {
+  border: 1px solid #e0e0e0;
+  margin: 10px 0;
+}
+
+/* Table for cart items */
+.cartTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+/* Table header and cell styles */
+.cartTable th, .cartTable td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* Product display in cart */
+.cartProduct {
+  display: flex;
+  align-items: center;
+}
+
+/* Image styling */
+.productImg {
+  width: 30px;
+  height: 30px;
+  padding: auto;
+  margin-right: 10px;
+}
+
+/* Quantity button styles */
+.qtyBtn {
+  background-color: #ffffff; /* Light pink color */
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Hover effect for quantity buttons */
+.qtyBtn:hover {
+  background-color: #ffb3b3; /* Slightly darker pink on hover */
+}
+
+/* Delete button styling */
+.deleteBtn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+/* Action buttons below cart */
+.cartActions {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Styles for buttons */
+.continueShopping, .clearCart {
+  background-color: #c86968; 
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.checkoutBtn {
+  background-color: #815554;
+  color: #ffffff;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto; 
+}
+
+/* Hover effect for action buttons */
+.continueShopping:hover, .clearCart:hover, .checkoutBtn:hover {
+  background-color: #ffb3b3; /* Slightly darker pink on hover */
+}
+
+/* Checkout title */
+.checkoutTitle {
+  font-size: 20px;
+  color: #333;
+  text-align: left; /* Align left */
+  margin-top: 20px; /* Add space above checkout title */
+}
+
+/* Checkout information section */
+.checkoutInfo {
+  margin-top: 10px;
+  margin-bottom: 10px; /* Space below checkout information */
+}
+
+/* Voucher input field styling */
+.voucherInput {
+  padding: 5px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px; /* Space below voucher input */
+}
+
+/* Apply button styling */
+.applyBtn {
+  background-color: #ffcccb; /* Light pink color */
+  color: #333;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 10px; /* Space below apply button */
+}
+
+/* Hover effect for apply button */
+.applyBtn:hover {
+  background-color: #ffb3b3; /* Slightly darker pink on hover */
+}
+
+/* Amount display styling */
+.amount {
+  font-weight: bold; /* Make amounts bold */
+}
+
+/* Delivery note styling */
+.deliveryNote {
+  font-size: 12px;
+  color: #666; /* Lighter color for the note */
+  margin-top: 5px;
+  margin-bottom: 10px; /* Space below delivery note */
+}

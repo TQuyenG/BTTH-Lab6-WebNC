@@ -1,95 +1,70 @@
-import Image from "next/image";
-import styles from "./page.module.css";
+"use client";
+import Link from "next/link";
+import styles from "@/styles/home.module.css";
+import { motion } from "framer-motion";
 
-export default function Home() {
+export default function HomePage() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <section className={styles.container}>
+      {/* Header Giới thiệu */}
+      <motion.div 
+        className={styles.intro}
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+      >
+        <h1>Welcome to <span>MY SHOP</span>!</h1>
+        <p>Hãy cùng chúng tôi khám phá những sản phẩm công nghệ mới nhất trên thị trường, từ điện thoại thông minh cho đến laptop, đồng hồ thông minh và nhiều thiết bị gia dụng thông minh khác.</p>
+        <p>Chúng tôi cam kết mang đến cho bạn những sản phẩm chất lượng cao với giá ưu đãi hấp dẫn, giúp bạn tiết kiệm chi phí mà vẫn sở hữu được những công nghệ tiên tiến nhất. Đừng bỏ lỡ cơ hội trải nghiệm những tính năng nổi bật và thiết kế hiện đại, được cập nhật thường xuyên để đáp ứng nhu cầu ngày càng cao của người tiêu dùng.</p>
+        <p>Tham gia ngay hôm nay để nhận những ưu đãi đặc biệt và trở thành người đầu tiên sở hữu những sản phẩm công nghệ đỉnh cao!</p>
 
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
+        <Link href="/products">
+          <motion.button 
+            className={styles.shopButton}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.9 }}
           >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
+            Khám phá ngay
+          </motion.button>
+        </Link>
+      </motion.div>
+
+      {/* Hình ảnh banner */}
+      <motion.div 
+        className={styles.banner}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <img src="/banner.jpg" alt="MY SHOP" />
+      </motion.div>
+
+      {/* Danh mục sản phẩm nổi bật */}
+      <motion.div 
+        className={styles.featuredProducts}
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8, delay: 0.5 }}
+      >
+        <h2>Sản phẩm nổi bật</h2>
+        <div className={styles.productsGrid}>
+          <div className={styles.productCard}>
+            <img src="/iphone1.jpg" alt="iPhone 14" />
+            <h3>iPhone 14</h3>
+            <p>Giá: 20,000,000 VND</p>
+          </div>
+          <div className={styles.productCard}>
+            <img src="/macbook1.jpg" alt="MacBook Air M2" />
+            <h3>MacBook Air M2</h3>
+            <p>Giá: 27,000,000 VND</p>
+          </div>
+          <div className={styles.productCard}>
+            <img src="/airpods1.jpg" alt="AirPods Pro" />
+            <h3>AirPods Pro</h3>
+            <p>Giá: 5,500,000 VND</p>
+          </div>
         </div>
-      </main>
-      <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+      </motion.div>
+    </section>
   );
 }
